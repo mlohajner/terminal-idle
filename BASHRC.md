@@ -3,11 +3,6 @@
 ## This sample chooses random 'screen saver'
 ```
 terminal_idle() {
-	if [[ -n "$TERMINAL_IDLE_STARTED" ]]; then
-		return
-	fi
-	TERMINAL_IDLE_STARTED=1
-
 	local cmds=(
 		"cmatrix -b -u 2"
 		"cbonsai -l -i"
@@ -17,8 +12,6 @@ terminal_idle() {
 	local cmd=${cmds[RANDOM % ${#cmds[@]}]}
 	eval "$cmd"
 	printf '\e]111\a'
-
-	unset TERMINAL_IDLE_STARTED
 }
 trap terminal_idle SIGALRM
 ```
@@ -27,16 +20,9 @@ trap terminal_idle SIGALRM
 ## This sample uses simple chafa animation:
 ```
 terminal_idle() {
-	if [[ -n "$TERMINAL_IDLE_STARTED" ]]; then
-		return
-	fi
-	TERMINAL_IDLE_STARTED=1
-
 	printf '\e[?1049h\e]11;#000000\a'
 	chafa ~/Pictures/Wallpapers/terminal-idle.gif -w 9 --bg black
 	printf '\e]111\a\e[?1049l'
-
-	unset TERMINAL_IDLE_STARTED
 }
 trap terminal_idle SIGALRM
 ```
@@ -48,11 +34,6 @@ Flexible bacground support: `yourimagename.#FFCC00.gif`
 -script extracts background color from filename for terminal and chafa background**
 ```
 terminal_idle() {
-	if [[ -n "$TERMINAL_IDLE_STARTED" ]]; then
-		return
-	fi
-	TERMINAL_IDLE_STARTED=1
-
 	local wallpaper_dir="/home/marek/Pictures/Wallpapers/terminal_idle"
 	local image bg
 	image=$(find "$wallpaper_dir" -maxdepth 1 -type f | shuf -n 1)
@@ -62,8 +43,6 @@ terminal_idle() {
 	printf '\e[?1049h\e]11;%s\a' "$bg"
 	chafa "$image" -w 9 --bg "${bg#\#}"
 	printf '\e]111\a\e[?1049l'
-
-	unset TERMINAL_IDLE_STARTED
 }
 trap terminal_idle SIGALRM
 ```
