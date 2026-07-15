@@ -36,7 +36,7 @@ the benefit of having **no resident process**.
 3. **`.bashrc`** for that shell has a trap registered:
 
    ```bash
-   ascii_screensaver() {
+   terminal_idle() {
        local cmds=(
            "cmatrix -b -u 2"
            "cbonsai -l -i"
@@ -47,7 +47,7 @@ the benefit of having **no resident process**.
        eval "$cmd"
        printf '\e]111\a'
    }
-   trap ascii_screensaver SIGALRM
+   trap terminal_idle SIGALRM
    ```
 
    The signal reaches the shell, which catches it and runs
