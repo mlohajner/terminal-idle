@@ -34,7 +34,7 @@ Flexible bacground support: `yourimagename.#FFCC00.gif`
 -script extracts background color from filename for terminal and chafa background**
 ```
 terminal_idle() {
-	local wallpaper_dir="/home/marek/Pictures/Wallpapers/terminal_idle"
+	local wallpaper_dir="~/Pictures/Wallpapers/terminal_idle"
 	local image bg
 	image=$(find "$wallpaper_dir" -maxdepth 1 -type f | shuf -n 1)
 	bg=$(basename "$image" | grep -oP '#[0-9A-Fa-f]{6}')
