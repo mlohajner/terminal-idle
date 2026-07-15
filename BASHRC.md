@@ -28,12 +28,12 @@ trap terminal_idle SIGALRM
 ```
 ---
 
-## This sample uses terminal_idle collection of images in your Pictures/Wallpaper directory
-** NOTE: flexible bacground support: <filename>.#FFCC00.gif  
-script extracts configurable background from filename and uses this as terminal and chafa background **
+## This sample uses random image from terminal_idle collection
+**NOTE: flexible bacground support: <filename>.#FFCC00.gif  
+script extracts configurable background from filename and uses this as terminal and chafa background**
 ```
 terminal_idle() {
-	local wallpaper_dir="/home/marek/Pictures/Wallpapers/terminal_idle"
+	local wallpaper_dir="~/Pictures/Wallpapers/terminal_idle"
 	local image
 	image=$(find "$wallpaper_dir" -maxdepth 1 -type f | shuf -n 1)
 
