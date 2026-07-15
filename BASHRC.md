@@ -1,4 +1,6 @@
-# his sample chooses random 'screen saver'
+# Example signal handlers
+
+## This sample chooses random 'screen saver'
 ```
 terminal_idle() {
 	local cmds=(
@@ -15,7 +17,7 @@ trap terminal_idle SIGALRM
 ```
 ---
 
-# this sample uses chafa animation:
+## this sample uses chafa animation:
 ```
 terminal_idle() {
 	printf '\e[?1049h\e]11;#000000\a'
@@ -26,9 +28,9 @@ trap terminal_idle SIGALRM
 ```
 ---
 
-# this sample uses terminal_idle collection of images in your Pictures/Wallpaper directory
-# NOTE: flexible bacground support: <filename>.#FFCC00.gif
-# script extracts configurable background from filename and uses this as terminal and chafa background
+## This sample uses terminal_idle collection of images in your Pictures/Wallpaper directory
+** NOTE: flexible bacground support: <filename>.#FFCC00.gif  
+script extracts configurable background from filename and uses this as terminal and chafa background **
 ```
 terminal_idle() {
 	local wallpaper_dir="/home/marek/Pictures/Wallpapers/terminal_idle"
