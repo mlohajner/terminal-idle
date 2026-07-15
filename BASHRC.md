@@ -17,7 +17,7 @@ trap terminal_idle SIGALRM
 ```
 ---
 
-## this sample uses chafa animation:
+## This sample uses simple chafa animation:
 ```
 terminal_idle() {
 	printf '\e[?1049h\e]11;#000000\a'
