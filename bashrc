@@ -15,7 +15,7 @@ trap terminal_idle SIGALRM
 #this sample uses chafa animation:
 terminal_idle() {
 	printf '\e]11;#000000\a\e[?1049h'
-	chafa /home/marek/Pictures/Wallpapers/terminal-idle.gif -w 9 --bg black
+	chafa ~/Pictures/Wallpapers/terminal-idle.gif -w 9 --bg black
 	printf '\e[?1049l\e]111\a'
 }
 trap terminal_idle SIGALRM
