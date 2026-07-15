@@ -4,6 +4,10 @@ A system that detects inactivity in open terminals and launches a custom
 `cmatrix` / `asciiquarium` / `cbonsai` as a screensaver.  
 **Without resident (background) process constantly polling or listening for input events.**
 
+| Asciiquarium | Cbonsai | Chafa | CMatrix |
+|:-:|:-:|:-:|:-:|
+| ![](screens/asciiquarium.png) | ![](screens/cbonsai.png) | ![](screens/chafa.png) | ![](screens/cmatrix.png) |
+
 ## The idea
 
 Instead of the classic approach (a process that sits permanently in memory
