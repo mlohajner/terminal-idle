@@ -64,7 +64,7 @@ the benefit of having **no resident process**.
 |---|---|
 | `~/.local/bin/terminal-idle.sh` | Main logic: idle check + signal sending |
 | `~/.config/systemd/user/terminal-idle.service` | Periodic script execution (no `.timer`, via `Restart=`) |
-| `~/.bashrc` | Trap for `SIGALRM` that runs `ascii_screensaver` |
+| `~/.bashrc` | Trap for `SIGALRM` that runs `terminal_idler` |
 
 ## Installation
 
