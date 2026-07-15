@@ -30,7 +30,7 @@ trap terminal_idle SIGALRM
 
 ## This sample uses random image from terminal_idle collection
 **NOTE:  
-Flexible bacground support: <filename>.#FFCC00.gif  
+Flexible bacground support: `yourimagename.#FFCC00.gif`  
 -script extracts background color from filename for terminal and chafa background**
 ```
 terminal_idle() {
