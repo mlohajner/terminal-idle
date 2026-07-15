@@ -1,0 +1,13 @@
+# ~/.config/systemd/user/terminal-idle.service
+[Unit]
+Description=Check terminal idle time and trigger terminal screensaver
+
+[Service]
+Type=simple
+Environment=INACTIVITY_PERIOD=300
+ExecStart=%h/.local/bin/terminal-idle
+Restart=always
+RestartSec=300
+
+[Install]
+WantedBy=default.target
