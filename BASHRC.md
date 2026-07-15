@@ -29,8 +29,9 @@ trap terminal_idle SIGALRM
 ---
 
 ## This sample uses random image from terminal_idle collection
-**NOTE: flexible bacground support: <filename>.#FFCC00.gif  
-script extracts configurable background from filename and uses this as terminal and chafa background**
+**NOTE:  
+Flexible bacground support: <filename>.#FFCC00.gif  
+-script extracts background color from filename for terminal and chafa background**
 ```
 terminal_idle() {
 	local wallpaper_dir="~/Pictures/Wallpapers/terminal_idle"
