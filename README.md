@@ -55,7 +55,7 @@ the benefit of having **no resident process**.
    ```
 
    The signal reaches the shell, which catches it and runs
-   `ascii_screensaver` as its own foreground job — that's why Ctrl-C exits
+   `terminal_idle` as its own foreground job — that's why Ctrl-C exits
    it completely naturally and returns to that shell's normal prompt.
 
 ## Files
